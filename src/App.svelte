@@ -39,14 +39,20 @@
 
 				<div class="card" style="width: auto;">
 					<div class="card-body">
-						<h5 class="card-title">Método de Bisección</h5>
+						<h5 class="card-title">Método dos</h5>
 						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
 					</div>
 				</div>
 				
+				<div class="card" style="width: auto;">
+					<div class="card-body">
+						<h5 class="card-title">Método tres</h5>
+						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
+					</div>
+				</div>
 				<br>
 				
-				<div class="card" style="width: auto;">
+				<div class="card" style="width: auto; height: max-content">
 					<div class="card-body">
 						<h5 class="card-title">Ingrese los datos</h5>
 						<br>
@@ -74,10 +80,31 @@
 
 			</div>
 			<div class="col">Parte de visualizacion
-				<div class="card" style="width: 100%; height: 100vh;">
+				<div class="card" style="width: 100%; height: max-content;">
 					<div class="card-body">
 						<h5 class="card-title">Resutado de la operación</h5>
+						<div class="card" style="width: 100%; height: 33vh;">
+							<div class="card-body">
+								<h5 class="card-title">Resultado No. 1</h5>
+								<p class="card-text">Aqui va el resultado</p>
+							</div>
+						</div>
 						<br>
+						<div class="card" style="width: 100%; height: 33vh;">
+							<div class="card-body">
+								<h5 class="card-title">Resultado No. 2</h5>
+								<p class="card-text">Aqui va el resultado</p>
+							</div>
+						</div>
+						<br>
+						<div class="card" style="width: 100%; height: 33vh;">
+							<div class="card-body">
+								<h5 class="card-title">Interpretación de resultados</h5>
+								<p class="card-text">Interpretación aquí</p>
+							</div>
+						</div>
+						
+
 					</div>
 				</div>
 			</div>
