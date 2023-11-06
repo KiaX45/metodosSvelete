@@ -80,7 +80,7 @@
 									aria-describedby="emailHelp"
 								/>
 								<div id="xiHelp" class="form-text">
-									Ingrese el limite superior
+									Ingrese el limite inferior
 								</div>
 							</div>
 							<div class="mb-3">
@@ -92,7 +92,7 @@
 									aria-describedby="emailHelp"
 								/>
 								<div id="xsHelp" class="form-text">
-									Ingrese el limite inferior
+									Ingrese el limite superior
 								</div>
 							</div>
 
