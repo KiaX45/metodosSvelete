@@ -10,9 +10,9 @@
 
   let iteraciones = [];
   const dispatch = createEventDispatcher();
-  console.log({ ncs, es, xi, xs });
+  console.log({ncs, es, xi, xs});
   onMount(async () => {
-    const urlApi = "https://metodos-production.up.railway.app/primer";
+    const urlApi = "https://metodos-production.up.railway.app/falsa1P";
     const response = await fetch(urlApi, {
       method: "POST",
       headers: {
@@ -32,7 +32,7 @@
 </script>
 
 <main>
-  <h1>Biseccion primer punto</h1>
+  <h1>Falsa pocisión primer punto</h1>
   <table class="table">
     <thead>
       <tr>
