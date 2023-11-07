@@ -1,4 +1,10 @@
 <script>
+	//importamos el componente 
+	import { onMount } from 'svelte';
+	//creamos una variable para guardar los datos
+	import PrimerPuntoBiseccion from './routes/components/PrimerPuntoBiseccion.svelte';
+
+
 </script>
 
 <main>
@@ -147,6 +153,12 @@
 		</div>
 		<div class="card-footer text-body-secondary">2023 © YLG Corporation</div>
 	</div>
+
+	<div>
+		Componente que se deberia ver al final
+		<PrimerPuntoBiseccion />
+	</div>
+
 </main>
 
 <style>
