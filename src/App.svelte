@@ -136,7 +136,7 @@
 
 			<div class="col" style="overflow: hidden;">
 				Parte de visualizacion
-				<div class="card" style="width: 100%; height: 100%; overflow: auto;">
+				<div class="card" style="width: 100%; height: 100%;">
 					<div class="card-body">
 						<h5 class="card-title">Resutado de la operación</h5>
 						<div class="card" style="width: 100%; height: 100%; overflow: auto;">
