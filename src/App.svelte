@@ -5,12 +5,20 @@
   import PrimerPuntoBiseccion from "./routes/components/PrimerPuntoBiseccion.svelte";
   import ApiPrimerPuntoFalsa from "./routes/components/Api/ApiPrimerPuntoFalsa.svelte";
   import ApiSegundoPunto from "./routes/components/Api/ApiSegundoPunto.svelte";
+  import ApiTercerPuntoBiseccion from "./routes/components/Api/ApiTercerPuntoBiseccion.svelte";
+  import ApiTercerPuntoFalsa from "./routes/components/Api/ApiTercerPuntoFalsa.svelte";
+  import ApiTercerPuntoNewton from "./routes/components/Api/ApiTercerPuntoNewton.svelte";
+  import ApiTercerPuntoSecante from "./routes/components/Api/ApiTercerPuntoSecante.svelte";
 
   //importamos el modal
   import BiseccionPrimerPunto from "./routes/components/forms/BiseccionPrimerPunto.svelte";
   //importamos el segundo modal
   import FormularioFalsaPrimerPunto from "./routes/components/forms/FormularioFalsaPrimerPunto.svelte";
   import FormularioSegundoPunto from "./routes/components/forms/FormularioSegundoPunto.svelte";
+  import FormularioBisec3P from "./routes/components/forms/FormularioBisec3P.svelte";
+  import FormularioFalsa3P from "./routes/components/forms/FormularioFalsa3P.svelte";
+  import FormularioNewton3P from "./routes/components/forms/FormularioNewton3P.svelte";
+  import FormularioSecante3P from "./routes/components/forms/FormularioSecante3P.svelte";
   //funciones para poder controlar el modal que pide los datos de la Api
   let showModal = false;
   let showComponent = false;
@@ -20,6 +28,18 @@
 
   let showModalsegundoP = false;
   let showComponentsegundoP = false;
+
+  let showModalTercerBiseccion3P = false;
+  let showComponentTercerBiseccion3P = false;
+
+  let showModalfalsa3P = false;
+  let showComponentfalsa3P = false;
+
+  let showNewton3P = false;
+  let showComponentNewton3P = false;
+
+  let showSecante3P = false;
+  let showComponentSecante3P = false;
 
   let componentKey = 1;
 
@@ -35,9 +55,26 @@
     showModalsegundoP = !showModalsegundoP;
   }
 
+  function toggleModalTercerBiseccion3P() {
+    showModalTercerBiseccion3P = !showModalTercerBiseccion3P;
+  }
+
+  function toggleModalfalsa3P() {
+    showModalfalsa3P = !showModalfalsa3P;
+  }
+
+  function toggleModalNewton3P() {
+    showNewton3P = !showNewton3P;
+  }
+
+  function toggleModalSecante3P() {
+    showSecante3P = !showSecante3P;
+  }
+
   let formData = {}; // Aquí almacenarás los datos del formulario
 
   function handleFormSubmit(event) {
+    ocultar();
     formData = event.detail; // Nuevos datos del formulario
     console.log(formData);
     componentKey++; // Incrementa la clave para forzar la recreación del componente
@@ -46,6 +83,7 @@
   }
 
   function handleFormSubmitfalsa1P(event) {
+    ocultar();
     formData = event.detail; // Nuevos datos del formulario
     console.log(formData);
     componentKey++; // Incrementa la clave para forzar la recreación del componente
@@ -62,10 +100,50 @@
     toggleModalsegundoP(); // Cierra el modal después de enviar el formulario
   }
 
+  function handleFormSubmitTercerBiseccion3P(event) {
+    ocultar();
+    formData = event.detail; // Nuevos datos del formulario
+    console.log(formData);
+    componentKey++; // Incrementa la clave para forzar la recreación del componente
+    showComponentTercerBiseccion3P = true;
+    toggleModalTercerBiseccion3P(); // Cierra el modal después de enviar el formulario
+  }
+
+  function handleFormSubmitfalsa3P(event) {
+    ocultar();
+    formData = event.detail; // Nuevos datos del formulario
+    console.log(formData);
+    componentKey++; // Incrementa la clave para forzar la recreación del componente
+    showComponentfalsa3P = true;
+    toggleModalfalsa3P(); // Cierra el modal después de enviar el formulario
+  }
+
+  function handleFormSubmitNewton3P(event) {
+    ocultar();
+    formData = event.detail; // Nuevos datos del formulario
+    console.log(formData);
+    componentKey++; // Incrementa la clave para forzar la recreación del componente
+    showComponentNewton3P = true;
+    toggleModalNewton3P(); // Cierra el modal después de enviar el formulario
+  }
+
+  function handleFormSubmitSecante3P(event) {
+    ocultar();
+    formData = event.detail; // Nuevos datos del formulario
+    console.log(formData);
+    componentKey++; // Incrementa la clave para forzar la recreación del componente
+    showComponentSecante3P = true;
+    toggleModalSecante3P(); // Cierra el modal después de enviar el formulario
+  }
+
   const ocultar = () => {
     showComponent = false;
     showComponentfalsa1P = false;
     showComponentsegundoP = false;
+    showComponentTercerBiseccion3P = false;
+    showComponentfalsa3P = false;
+    showComponentNewton3P = false;
+    showComponentSecante3P = false;
   };
 
   const ocultarPrimero = () => {
@@ -140,32 +218,39 @@
       <div class="col">
         <div class="card" style="width: auto;">
           <div class="card-body">
-            <h5 class="card-title">Método tres</h5>
-            <a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
+            <h5 class="card-title">Tercer punto Bisección</h5>
+            <button class="btn btn-primary" on:click={toggleModalTercerBiseccion3P}>
+              Calcular
+            </button>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card" style="width: auto;">
           <div class="card-body">
-            <h5 class="card-title">Método tres</h5>
-            <a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
+            <h5 class="card-title">Tercer Punto Falsa Posición</h5>
+             <button class="btn btn-primary" on:click={toggleModalfalsa3P}>
+              Calcular
+            </button>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card" style="width: auto;">
           <div class="card-body">
-            <h5 class="card-title">Método tres</h5>
-            <a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
+            <h5 class="card-title">Tercer Punto Newton</h5>
+            <button class="btn btn-primary" on:click={toggleModalNewton3P}>
+              Calcular
+            </button>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card" style="width: auto;">
           <div class="card-body">
-            <h5 class="card-title">Método tres</h5>
-            <a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
+            <h5 class="card-title">Tercer punto secante</h5>
+            <button class="btn btn-primary" on:click={toggleModalSecante3P}>
+              Calcular
           </div>
         </div>
       </div>
@@ -230,6 +315,22 @@
       <FormularioSegundoPunto on:submit={handleFormSubmitsegundoP} />
     {/if}
 
+    {#if showModalTercerBiseccion3P}
+      <FormularioBisec3P on:submit={handleFormSubmitTercerBiseccion3P} />
+    {/if}
+
+    {#if showModalfalsa3P}
+      <FormularioFalsa3P on:submit={handleFormSubmitfalsa3P} />
+    {/if}
+
+    {#if showNewton3P}
+      <FormularioNewton3P on:submit={handleFormSubmitNewton3P} />
+    {/if}
+
+    {#if showSecante3P}
+      <FormularioSecante3P on:submit={handleFormSubmitSecante3P} />
+    {/if}
+
     <br />
 
     <div class="card text-center" style="width: 100%;">
@@ -254,6 +355,49 @@
         xi={formData.xi}
         ncs={formData.ncs}
         a={formData.a}
+      />
+    {/key}
+  {/if}
+
+  {#if showComponentTercerBiseccion3P}
+    {#key componentKey}
+      <ApiTercerPuntoBiseccion
+        {componentKey}
+        xi={formData.xi}
+        ncs={formData.ncs}
+        xs={formData.xs}
+      />
+    {/key}
+  {/if}
+
+  {#if showComponentfalsa3P}
+    {#key componentKey}
+      <ApiTercerPuntoFalsa
+        {componentKey}
+        xi={formData.xi}
+        ncs={formData.ncs}
+        xs={formData.xs}
+      />
+    {/key}
+  {/if}
+
+  {#if showComponentNewton3P}
+    {#key componentKey}
+      <ApiTercerPuntoNewton
+        {componentKey}
+        xi={formData.xi}
+        ncs={formData.ncs}
+      />
+    {/key}
+  {/if}
+
+  {#if showComponentSecante3P}
+    {#key componentKey}
+      <ApiTercerPuntoSecante
+        {componentKey}
+        xi={formData.xi}
+        ncs={formData.ncs}
+        xi0={formData.xi0}
       />
     {/key}
   {/if}
