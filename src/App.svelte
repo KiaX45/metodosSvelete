@@ -75,7 +75,7 @@
 		</div>
 	</nav>
 
-	<div class="container text-center" style="width: 100%;">
+	<div class="container text-center" style="width: 100%; overflow: auto;">
 		<div class="row">
 			<div class="col-4">
 				Parte de seleccion
