@@ -134,51 +134,51 @@
 				</div>
 			</div>
 
-			<div class="col-8">
+			<div class="col">
 				Parte de visualizacion
 				<div class="card" style="width: max-content; height: 100%;">
 					<div class="card-body">
 						<h5 class="card-title">Resutado de la operación</h5>
+						{#if showComponent}
+							{#key componentKey}
+								<PrimerPuntoBiseccion
+									{componentKey}
+									ncs={formData.ncs}
+									es={formData.es}
+									xi={formData.xi}
+									xs={formData.xs}
+								/>
+								<br />
+								<div class="card" style="width: 100%; height: 33vh;">
+									<div class="card-body">
+										<h5 class="card-title">Interpretación de resultados</h5>
+										<p class="card-text">Interpretación aquí</p>
+									</div>
+								</div>
+							{/key}
+						{/if}
+
+						{#if showComponentfalsa1P}
+							{#key componentKey}
+								<ApiPrimerPuntoFalsa
+									{componentKey}
+									ncs={formData.ncs}
+									es={formData.es}
+									xi={formData.xi}
+									xs={formData.xs}
+								/>
+								<br />
+								<div class="card" style="width: 100%; height: 33vh;">
+									<div class="card-body">
+										<h5 class="card-title">Interpretación de resultados</h5>
+										<p class="card-text">Interpretación aquí</p>
+									</div>
+								</div>
+							{/key}
+						{/if}
 						<div class="card" style="width: 100%; height: 100%;">
 							<div class="card-body">
 								<h5 class="card-title">Resultado No. 1</h5>
-								{#if showComponent}
-									{#key componentKey}
-										<PrimerPuntoBiseccion
-											{componentKey}
-											ncs={formData.ncs}
-											es={formData.es}
-											xi={formData.xi}
-											xs={formData.xs}
-										/>
-										<br />
-										<div class="card" style="width: 100%; height: 33vh;">
-											<div class="card-body">
-												<h5 class="card-title">Interpretación de resultados</h5>
-												<p class="card-text">Interpretación aquí</p>
-											</div>
-										</div>
-									{/key}
-								{/if}
-
-								{#if showComponentfalsa1P}
-									{#key componentKey}
-										<ApiPrimerPuntoFalsa
-											{componentKey}
-											ncs={formData.ncs}
-											es={formData.es}
-											xi={formData.xi}
-											xs={formData.xs}
-										/>
-										<br />
-										<div class="card" style="width: 100%; height: 33vh;">
-											<div class="card-body">
-												<h5 class="card-title">Interpretación de resultados</h5>
-												<p class="card-text">Interpretación aquí</p>
-											</div>
-										</div>
-									{/key}
-								{/if}
 							</div>
 						</div>
 					</div>
