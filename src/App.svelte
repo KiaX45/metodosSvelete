@@ -134,7 +134,7 @@
 				</div>
 			</div>
 
-			<div class="col">
+			<div class="col" style="overflow: auto;">
 				Parte de visualizacion
 				<div class="card" style="width: 100%; height: max-content; overflow: auto;">
 					<div class="card-body">
