@@ -33,7 +33,7 @@
 
 <main>
   <h1>Biseccion primer punto</h1>
-  <table class="table">
+  <table class="tabletable table-dark table-hover">
     <thead>
       <tr>
         <th>Número de Iteración</th>
