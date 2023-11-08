@@ -134,7 +134,7 @@
 				</div>
 			</div>
 
-			<div class="col-8">
+			<div class="col-12">
 				Parte de visualizacion
 				<div class="card" style="width: max-content; height: 100%;">
 					<div class="card-body">
