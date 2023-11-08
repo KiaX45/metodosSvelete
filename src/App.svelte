@@ -423,6 +423,7 @@
         </p>
         <button class="btn btn-success">Volver al inicio</button>
       </div>
+      <br>
       <div class="card-text">
         2023 © YLG Corporation
       </div>
