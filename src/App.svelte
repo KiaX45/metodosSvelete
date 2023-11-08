@@ -77,7 +77,7 @@
 
 	<div class="container text-center" style="width: 100%;">
 		<div class="row">
-			<div class="col-4">
+
 				Parte de seleccion
 				<div class="card" style="width: auto;">
 					<div class="card-body">
@@ -131,7 +131,7 @@
 						<h5 class="card-title">Método tres</h5>
 						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
 					</div>
-				</div>
+
 			</div>
 
 			<div class="col">
