@@ -171,7 +171,7 @@
 								/>
 								<br />
 								<div class="card" style="width: 100%; height: 33vh;">
-									<div class="card-body">
+									<div class="card-body" style="width: 100%;">
 										<h5 class="card-title">Interpretación de resultados</h5>
 										<p class="card-text">Interpretación aquí</p>
 									</div>
