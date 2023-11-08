@@ -53,7 +53,7 @@
             <input type="number" step="any" class="form-control" id="xs" bind:value={formData.xs}>
           </div>
           <!-- Botón para enviar el formulario -->
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="submit" class="btn btn-success">Enviar</button>
         </form>
       </div>
     </div>
@@ -76,5 +76,9 @@
     height: 100vh;
     background-color: #000;
     opacity: 0.5;
+  }
+
+  .btn {
+    background-color: #519259;
   }
 </style>

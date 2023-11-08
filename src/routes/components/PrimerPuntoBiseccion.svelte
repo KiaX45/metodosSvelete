@@ -36,7 +36,7 @@
   <h1>Método de Bisección Primer Punto</h1>
   <h2>f(x) = x^10 - 1 </h2>
   <p>Dado entre 0 y 1.3</p>
-  <table class="table table-info table-striped table-bordered">
+  <table class="table table-success table-striped table-bordered">
     <thead>
       <tr>
         <th>Iteración</th>

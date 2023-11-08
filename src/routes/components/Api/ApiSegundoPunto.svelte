@@ -36,7 +36,7 @@
   <h3>Resultado de la Operación</h3>
   <h1>Método de Newton-Raphson Para La Raíz Cúbica de un Número</h1>
   <p>Calculando raíz cúbica de 155</p>
-  <table class="table table-info table-striped table-bordered">
+  <table class="table table-success table-striped table-bordered">
     <thead>
       <tr>
         <th>Iteración</th>

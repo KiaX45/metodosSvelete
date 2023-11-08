@@ -147,10 +147,10 @@
   };
 </script>
 
-<main>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<main style="background-color: FFEED9;">
+  <nav class="navbar navbar-expand-lg bg-success">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Metodos Númericos Aplicativos</a>
+      <a class="navbar-brand text-color" href="#">Metodos Númericos Aplicativos</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -165,23 +165,22 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active text-color" aria-current="page" href="#" style="color: rgb(234, 242, 0);">Home</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <br>
+
   <div class="container text-center">
-    <div
-      class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3"
-      style="justify-content: center;"
-    >
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3" style="justify-content: center;">
       <div class="col">
         <div class="card" style="width: auto;">
           <div class="card-body">
             <h5 class="card-title">Método de Bisección Primer Punto</h5>
-            <button class="btn btn-primary" on:click={toggleModal}>
+            <button class="btn btn-success" on:click={toggleModal}>
               Calcular
             </button>
           </div>
@@ -191,7 +190,7 @@
         <div class="card" style="width: auto;">
           <div class="card-body">
             <h5 class="card-title">Método de Falsa Pocisión Primer Punto</h5>
-            <button class="btn btn-primary" on:click={toggleModalfalsa1P}>
+            <button class="btn btn-success" on:click={toggleModalfalsa1P}>
               Calcular
             </button>
           </div>
@@ -201,7 +200,7 @@
         <div class="card" style="width: auto;">
           <div class="card-body">
             <h5 class="card-title">Segundo Punto Raíz Cúbica de un Número</h5>
-            <button class="btn btn-primary" on:click={toggleModalsegundoP}>
+            <button class="btn btn-success" on:click={toggleModalsegundoP}>
               Calcular
             </button>
           </div>
@@ -212,7 +211,7 @@
           <div class="card-body">
             <h5 class="card-title">Método de Bisección Tercer Punto</h5>
             <button
-              class="btn btn-primary"
+              class="btn btn-success"
               on:click={toggleModalTercerBiseccion3P}
             >
               Calcular
@@ -224,7 +223,7 @@
         <div class="card" style="width: auto;">
           <div class="card-body">
             <h5 class="card-title">Método de Falsa Posición Tercer Punto</h5>
-            <button class="btn btn-primary" on:click={toggleModalfalsa3P}>
+            <button class="btn btn-success" on:click={toggleModalfalsa3P}>
               Calcular
             </button>
           </div>
@@ -234,7 +233,7 @@
         <div class="card" style="width: auto;">
           <div class="card-body">
             <h5 class="card-title">Método de Newton-Raphson Tercer Punto</h5>
-            <button class="btn btn-primary" on:click={toggleModalNewton3P}>
+            <button class="btn btn-success" on:click={toggleModalNewton3P}>
               Calcular
             </button>
           </div>
@@ -244,7 +243,7 @@
         <div class="card" style="width: auto;">
           <div class="card-body">
             <h5 class="card-title">Método de la Secante Tercer Punto</h5>
-            <button class="btn btn-primary" on:click={toggleModalSecante3P}>
+            <button class="btn btn-success" on:click={toggleModalSecante3P}>
               Calcular
             </button>
           </div>
@@ -255,7 +254,7 @@
     <br>
 
     <div class="col" style="overflow-x: hidden;">
-      <div class="card" style="width: 100%; height: 100%;">
+      <div class="card-showMain" style="width: 100%; height: 100%;">
         <div class="card-body">
           {#if showComponent}
             {#key componentKey}
@@ -267,7 +266,7 @@
                 xs={formData.xs}
               />
               <br />
-              <div class="card" style="width: auto; height: 33vh;">
+              <div class="card-int" style="width: auto; height: 33vh;">
                 <div class="card-body" style="width: auto;">
                   <h5 class="card-title">Interpretación de resultados</h5>
                   <p class="card-text">Interpretación aquí</p>
@@ -286,7 +285,7 @@
                 xs={formData.xs}
               />
               <br />
-              <div class="card" style="width: 100%; height: 33vh;">
+              <div class="card-int" style="width: 100%; height: 33vh;">
                 <div class="card-body">
                   <h5 class="card-title">Interpretación de resultados</h5>
                   <p class="card-text">Interpretación aquí</p>
@@ -316,7 +315,7 @@
               xs={formData.xs}
             />
             <br />
-            <div class="card" style="width: 100%; height: 33vh;">
+            <div class="card-int" style="width: 100%; height: 33vh;">
               <div class="card-body">
                 <h5 class="card-title">Interpretación de resultados</h5>
                 <p class="card-text">Interpretación aquí</p>
@@ -334,7 +333,7 @@
               xs={formData.xs}
             />
             <br />
-            <div class="card" style="width: 100%; height: 33vh;">
+            <div class="card-int" style="width: 100%; height: 33vh;">
               <div class="card-body">
                 <h5 class="card-title">Interpretación de resultados</h5>
                 <p class="card-text">Interpretación aquí</p>
@@ -351,7 +350,7 @@
               ncs={formData.ncs}
             />
             <br />
-            <div class="card" style="width: 100%; height: 33vh;">
+            <div class="card-int" style="width: 100%; height: 33vh;">
               <div class="card-body">
                 <h5 class="card-title">Interpretación de resultados</h5>
                 <p class="card-text">Interpretación aquí</p>
@@ -369,7 +368,7 @@
               xi0={formData.xi0}
             />
             <br />
-            <div class="card" style="width: 100%; height: 33vh;">
+            <div class="card-int" style="width: 100%; height: 33vh;">
               <div class="card-body">
                 <h5 class="card-title">Interpretación de resultados</h5>
                 <p class="card-text">Interpretación aquí</p>
@@ -411,20 +410,20 @@
 
     <br />
 
-    <div class="card text-center" style="width: 100%;">
-      <div class="card-header" style="color: white;">
+    <div class="card-footer text-center" style="width: 100%;">
+      <div class="card-header">
         Ingeniería de Sistemas - Universidad de Nariño
       </div>
       <div class="card-body">
-        <h5 class="card-title" style="color: white;">
+        <h5 class="card-title">
           Realizado y desarrollado por Luis Medina, Yesid Bolaños, Gabriel Peña
         </h5>
-        <p class="card-text" style="color: white;">
+        <p class="card-text">
           Todos los derechos reservados
         </p>
-        <button class="btn btn-primary">Volver al inicio</button>
+        <button class="btn btn-success">Volver al inicio</button>
       </div>
-      <div class="card-footer text-body-secondary" style="color: white;">
+      <div class="card-text">
         2023 © YLG Corporation
       </div>
     </div>
@@ -432,4 +431,34 @@
 </main>
 
 <style>
+
+  .card-footer {
+    background-color: #F7FFE5;
+  }
+
+  .navbar {
+    background-color: #F99417;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .card-showMain {
+    background-color: #F6FFDE;
+  }
+
+  .card {
+    background-color: #E5F9DB;
+    box-shadow: 2cm;
+  }
+
+  .card-int {
+    background-color: #F6FFDE;
+  }
+
+  .btn {
+    background-color: #519259;
+  }
+
+  .text-color {
+    color: rgb(234, 242, 0);
+  }
 </style>

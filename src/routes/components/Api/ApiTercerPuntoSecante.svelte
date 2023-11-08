@@ -34,7 +34,7 @@
   <h3>Resultado de la Operación</h3>
   <h1>Método de la Secante Tercer Punto</h1>
   <h2>f(x) = tan(x) - 0.5x </h2>
-  <table class="table table-info table-striped table-bordered">
+  <table class="table table-success table-striped table-bordered">
     <thead>
       <tr>
         <th>Iteración</th>
