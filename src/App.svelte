@@ -188,7 +188,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
 	</div>
 
 	<!-- Componente de modal que se muestra u oculta basado en la variable showModal -->
