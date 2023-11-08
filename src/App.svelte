@@ -44,8 +44,11 @@
 		toggleModalfalsa1P(); // Cierra el modal después de enviar el formulario
 	}
 
-	const ocultar = () => {
+	const ocultarPrimero = () => {
 		showComponent = false;
+	};
+
+	const ocultarFalsaP = () => {
 		showComponentfalsa1P = false;
 	};
 </script>
@@ -76,12 +79,12 @@
 	</nav>
 
 	<div class="container text-center">
-		<div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+		<div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3" style="justify-content: center;">
 			<div class="col">
 				<div class="card" style="width: auto;">
 					<div class="card-body">
 						<h5 class="card-title">Método de Bisección Primer Punto</h5>
-						<button class="btn btn-primary" on:click={toggleModal}>
+						<button class="btn btn-primary" on:click={toggleModal, ocultarFalsaP}>
 							Calcular
 						</button>
 					</div>
@@ -91,7 +94,7 @@
 				<div class="card" style="width: auto;">
 					<div class="card-body">
 						<h5 class="card-title">Método Falsa pocisión Primer Punto</h5>
-						<button class="btn btn-primary" on:click={toggleModalfalsa1P}>
+						<button class="btn btn-primary" on:click={toggleModalfalsa1P, ocultarPrimero}>
 							Calcular
 						</button>
 					</div>
