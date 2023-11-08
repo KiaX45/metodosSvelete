@@ -150,7 +150,9 @@
 <main style="background-color: FFEED9;">
   <nav class="navbar navbar-expand-lg bg-success">
     <div class="container-fluid">
-      <a class="navbar-brand text-color" href="#">Metodos Númericos Aplicativos</a>
+      <a class="navbar-brand text-color" href="#"
+        >Metodos Númericos Aplicativos</a
+      >
       <button
         class="navbar-toggler"
         type="button"
@@ -165,17 +167,25 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active text-color" aria-current="page" href="#" style="color: rgb(234, 242, 0);">Home</a>
+            <a
+              class="nav-link active text-color"
+              aria-current="page"
+              href="#"
+              style="color: rgb(234, 242, 0);">Home</a
+            >
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <br>
+  <br />
 
   <div class="container text-center">
-    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3" style="justify-content: center;">
+    <div
+      class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3"
+      style="justify-content: center;"
+    >
       <div class="col">
         <div class="card" style="width: auto;">
           <div class="card-body">
@@ -251,7 +261,7 @@
       </div>
     </div>
 
-    <br>
+    <br />
 
     <div class="col" style="overflow-x: hidden;">
       <div class="card-showMain" style="width: 100%; height: 100%;">
@@ -269,7 +279,26 @@
               <div class="card-int" style="width: auto; height: 33vh;">
                 <div class="card-body" style="width: auto;">
                   <h5 class="card-title">Interpretación de resultados</h5>
-                  <p class="card-text">Interpretación aquí</p>
+                  <p class="card-text">
+                    En este ejemplo podemos observar como el método de bisección
+                    nos termina por dar el resultado deseado con tan solo 15
+                    iteraciones mientras que el método de falsa posición
+                    necesita de 42 iteraciones para poder darnos un resultado
+                    similar, cosa que contradice lo que fue demostrado en clases
+                    anteriores. Esto se debe principalmente a que el método de
+                    falsa posición puede ser más rápido que la bisección porque
+                    intenta aprovechar la forma de la función para encontrar la
+                    raíz, pero puede volverse ineficiente si la raíz no divide
+                    al intervalo en segmentos donde la función cambia a un ritmo
+                    constante. Esto puede suceder si la función es muy plana o
+                    muy empinada en una parte del intervalo. En nuestra función
+                    f(x) = x^10 – 1 es muy plana cerca de x = 0 y muy empinada
+                    cerca de x=1, lo que puede hacer que el método de falsa
+                    posición repita muchas veces el mismo extremo del intervalo,
+                    haciéndolo más lento. En cambio, el método de bisección no
+                    depende de la forma de la función y por eso fue más rápido
+                    esta vez.
+                  </p>
                 </div>
               </div>
             {/key}
@@ -288,7 +317,26 @@
               <div class="card-int" style="width: 100%; height: 33vh;">
                 <div class="card-body">
                   <h5 class="card-title">Interpretación de resultados</h5>
-                  <p class="card-text">Interpretación aquí</p>
+                  <p class="card-text">
+                    En este ejemplo podemos observar como el método de bisección
+                    nos termina por dar el resultado deseado con tan solo 15
+                    iteraciones mientras que el método de falsa posición
+                    necesita de 42 iteraciones para poder darnos un resultado
+                    similar, cosa que contradice lo que fue demostrado en clases
+                    anteriores. Esto se debe principalmente a que el método de
+                    falsa posición puede ser más rápido que la bisección porque
+                    intenta aprovechar la forma de la función para encontrar la
+                    raíz, pero puede volverse ineficiente si la raíz no divide
+                    al intervalo en segmentos donde la función cambia a un ritmo
+                    constante. Esto puede suceder si la función es muy plana o
+                    muy empinada en una parte del intervalo. En nuestra función
+                    f(x) = x^10 – 1 es muy plana cerca de x = 0 y muy empinada
+                    cerca de x=1, lo que puede hacer que el método de falsa
+                    posición repita muchas veces el mismo extremo del intervalo,
+                    haciéndolo más lento. En cambio, el método de bisección no
+                    depende de la forma de la función y por eso fue más rápido
+                    esta vez.
+                  </p>
                 </div>
               </div>
             {/key}
@@ -318,7 +366,24 @@
             <div class="card-int" style="width: 100%; height: 33vh;">
               <div class="card-body">
                 <h5 class="card-title">Interpretación de resultados</h5>
-                <p class="card-text">Interpretación aquí</p>
+                <p class="card-text">
+                  En este punto tenemos que tener muy en cuenta los intervalos
+                  que debemos tomar para poder sacar la raíz que buscamos que en
+                  este caso seria 4.274782 esto se debe a que la función
+                  proporcionada cuenta con varias asíntotas que pueden ocasionar
+                  problemas en nuestros cálculos con cualquiera de los cuatro
+                  métodos empleados. Otro problema con esta función es la rápida
+                  oscilación de la función entre menos infinito e infinito lo
+                  que puede causar que algunos de los métodos puedan encontrar
+                  raíces donde realmente no hay ninguna. Para Newton-Raphson y
+                  el método de la secante, la presencia de las asíntotas y la
+                  rápida variación de la función cerca de ellas también puede
+                  causar problemas. Si el punto inicial está demasiado lejos de
+                  la raíz real o muy cerca de una discontinuidad, la estimación
+                  de la raíz siguiente podría divergir o moverse hacia una raíz
+                  incorrecta debido al comportamiento extremo de la derivada de
+                  la tangente en esas regiones
+                </p>
               </div>
             </div>
           {/key}
@@ -336,7 +401,24 @@
             <div class="card-int" style="width: 100%; height: 33vh;">
               <div class="card-body">
                 <h5 class="card-title">Interpretación de resultados</h5>
-                <p class="card-text">Interpretación aquí</p>
+                <p class="card-text">
+                  En este punto tenemos que tener muy en cuenta los intervalos
+                  que debemos tomar para poder sacar la raíz que buscamos que en
+                  este caso seria 4.274782 esto se debe a que la función
+                  proporcionada cuenta con varias asíntotas que pueden ocasionar
+                  problemas en nuestros cálculos con cualquiera de los cuatro
+                  métodos empleados. Otro problema con esta función es la rápida
+                  oscilación de la función entre menos infinito e infinito lo
+                  que puede causar que algunos de los métodos puedan encontrar
+                  raíces donde realmente no hay ninguna. Para Newton-Raphson y
+                  el método de la secante, la presencia de las asíntotas y la
+                  rápida variación de la función cerca de ellas también puede
+                  causar problemas. Si el punto inicial está demasiado lejos de
+                  la raíz real o muy cerca de una discontinuidad, la estimación
+                  de la raíz siguiente podría divergir o moverse hacia una raíz
+                  incorrecta debido al comportamiento extremo de la derivada de
+                  la tangente en esas regiones
+                </p>
               </div>
             </div>
           {/key}
@@ -353,7 +435,24 @@
             <div class="card-int" style="width: 100%; height: 33vh;">
               <div class="card-body">
                 <h5 class="card-title">Interpretación de resultados</h5>
-                <p class="card-text">Interpretación aquí</p>
+                <p class="card-text">
+                  En este punto tenemos que tener muy en cuenta los intervalos
+                  que debemos tomar para poder sacar la raíz que buscamos que en
+                  este caso seria 4.274782 esto se debe a que la función
+                  proporcionada cuenta con varias asíntotas que pueden ocasionar
+                  problemas en nuestros cálculos con cualquiera de los cuatro
+                  métodos empleados. Otro problema con esta función es la rápida
+                  oscilación de la función entre menos infinito e infinito lo
+                  que puede causar que algunos de los métodos puedan encontrar
+                  raíces donde realmente no hay ninguna. Para Newton-Raphson y
+                  el método de la secante, la presencia de las asíntotas y la
+                  rápida variación de la función cerca de ellas también puede
+                  causar problemas. Si el punto inicial está demasiado lejos de
+                  la raíz real o muy cerca de una discontinuidad, la estimación
+                  de la raíz siguiente podría divergir o moverse hacia una raíz
+                  incorrecta debido al comportamiento extremo de la derivada de
+                  la tangente en esas regiones
+                </p>
               </div>
             </div>
           {/key}
@@ -371,7 +470,24 @@
             <div class="card-int" style="width: 100%; height: 33vh;">
               <div class="card-body">
                 <h5 class="card-title">Interpretación de resultados</h5>
-                <p class="card-text">Interpretación aquí</p>
+                <p class="card-text">
+                  En este punto tenemos que tener muy en cuenta los intervalos
+                  que debemos tomar para poder sacar la raíz que buscamos que en
+                  este caso seria 4.274782 esto se debe a que la función
+                  proporcionada cuenta con varias asíntotas que pueden ocasionar
+                  problemas en nuestros cálculos con cualquiera de los cuatro
+                  métodos empleados. Otro problema con esta función es la rápida
+                  oscilación de la función entre menos infinito e infinito lo
+                  que puede causar que algunos de los métodos puedan encontrar
+                  raíces donde realmente no hay ninguna. Para Newton-Raphson y
+                  el método de la secante, la presencia de las asíntotas y la
+                  rápida variación de la función cerca de ellas también puede
+                  causar problemas. Si el punto inicial está demasiado lejos de
+                  la raíz real o muy cerca de una discontinuidad, la estimación
+                  de la raíz siguiente podría divergir o moverse hacia una raíz
+                  incorrecta debido al comportamiento extremo de la derivada de
+                  la tangente en esas regiones
+                </p>
               </div>
             </div>
           {/key}
@@ -418,41 +534,36 @@
         <h5 class="card-title">
           Realizado y desarrollado por Luis Medina, Yesid Bolaños, Gabriel Peña
         </h5>
-        <p class="card-text">
-          Todos los derechos reservados
-        </p>
+        <p class="card-text">Todos los derechos reservados</p>
         <button class="btn btn-success">Volver al inicio</button>
       </div>
-      <br>
-      <div class="card-text">
-        2023 © YLG Corporation
-      </div>
+      <br />
+      <div class="card-text">2023 © YLG Corporation</div>
     </div>
   </div>
 </main>
 
 <style>
-
   .card-footer {
-    background-color: #F7FFE5;
+    background-color: #f7ffe5;
   }
 
   .navbar {
-    background-color: #F99417;
-    font-family: 'Times New Roman', Times, serif;
+    background-color: #f99417;
+    font-family: "Times New Roman", Times, serif;
   }
 
   .card-showMain {
-    background-color: #F6FFDE;
+    background-color: #f6ffde;
   }
 
   .card {
-    background-color: #E5F9DB;
+    background-color: #e5f9db;
     box-shadow: 2cm;
   }
 
   .card-int {
-    background-color: #F6FFDE;
+    background-color: #f6ffde;
   }
 
   .btn {

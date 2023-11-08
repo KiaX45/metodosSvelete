@@ -6,9 +6,9 @@
 
   // Este es el estado local del formulario, que recogerá los valores de los inputs
   let formData = {
-    xi: 0,
-    ncs: 0,
-    a: 0,
+    xi: 1,
+    ncs: 5,
+    a: 155,
   };
 
   // Esta función se llama cuando el formulario se envía

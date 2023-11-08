@@ -7,10 +7,11 @@
   export let es = 0;
   export let xi = 0;
   export let xs = 1.3;
+  let resultado;
 
   let iteraciones = [];
   const dispatch = createEventDispatcher();
-  console.log({ncs, es, xi, xs});
+  console.log({ ncs, es, xi, xs });
   onMount(async () => {
     const urlApi = "https://metodos-production.up.railway.app/falsa1P";
     const response = await fetch(urlApi, {
@@ -24,6 +25,10 @@
     if (response.ok) {
       const data = await response.json();
       iteraciones = data.data.iteraciones;
+      //Obtenemos el resultado de la ultima iteración y lo guardamos en una variable
+      console.log(iteraciones[iteraciones.length - 1]);
+      resultado = iteraciones[iteraciones.length - 1];
+      console.log(resultado.xr);
       dispatch("loaded", iteraciones); // Emitir un evento con las iteraciones cargadas
     } else {
       console.error("Error al realizar la solicitud:", response.status);
@@ -34,7 +39,7 @@
 <main>
   <h3>Resultado de la Operación</h3>
   <h1>Método de la Falsa Posición Primer Punto</h1>
-  <h2>f(x) = x^10 - 1 </h2>
+  <h2>f(x) = x^10 - 1</h2>
   <p>Dado entre 0 y 1.3</p>
   <table class="table table-success table-striped table-bordered">
     <thead>
