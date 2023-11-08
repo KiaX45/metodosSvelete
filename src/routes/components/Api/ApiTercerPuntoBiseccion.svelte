@@ -32,8 +32,10 @@
 </script>
 
 <main>
-  <h1>Biseccion primer punto</h1>
-  <table class="table table-striped">
+  <h3>Resultado de la Operación</h3>
+  <h1>Método de la Bisección Tercer Punto</h1>
+  <h2>f(x) = tan(x) - 0.5x </h2>
+  <table class="table table-info table-striped table-bordered">
     <thead>
       <tr>
         <th>Número de Iteración</th>

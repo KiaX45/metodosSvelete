@@ -145,14 +145,6 @@
     showComponentNewton3P = false;
     showComponentSecante3P = false;
   };
-
-  const ocultarPrimero = () => {
-    showModal = false;
-  };
-
-  const ocultarFalsaP = () => {
-    showModalfalsa1P = false;
-  };
 </script>
 
 <main>
@@ -198,7 +190,7 @@
       <div class="col">
         <div class="card" style="width: auto;">
           <div class="card-body">
-            <h5 class="card-title">Método Falsa pocisión Primer Punto</h5>
+            <h5 class="card-title">Método de Falsa Pocisión Primer Punto</h5>
             <button class="btn btn-primary" on:click={toggleModalfalsa1P}>
               Calcular
             </button>
@@ -208,7 +200,7 @@
       <div class="col">
         <div class="card" style="width: auto;">
           <div class="card-body">
-            <h5 class="card-title">Segundo Punto</h5>
+            <h5 class="card-title">Segundo Punto Raíz Cúbica de un Número</h5>
             <button class="btn btn-primary" on:click={toggleModalsegundoP}>
               Calcular
             </button>
@@ -218,8 +210,11 @@
       <div class="col">
         <div class="card" style="width: auto;">
           <div class="card-body">
-            <h5 class="card-title">Tercer punto Bisección</h5>
-            <button class="btn btn-primary" on:click={toggleModalTercerBiseccion3P}>
+            <h5 class="card-title">Método de Bisección Tercer Punto</h5>
+            <button
+              class="btn btn-primary"
+              on:click={toggleModalTercerBiseccion3P}
+            >
               Calcular
             </button>
           </div>
@@ -228,8 +223,8 @@
       <div class="col">
         <div class="card" style="width: auto;">
           <div class="card-body">
-            <h5 class="card-title">Tercer Punto Falsa Posición</h5>
-             <button class="btn btn-primary" on:click={toggleModalfalsa3P}>
+            <h5 class="card-title">Método de Falsa Posición Tercer Punto</h5>
+            <button class="btn btn-primary" on:click={toggleModalfalsa3P}>
               Calcular
             </button>
           </div>
@@ -238,7 +233,7 @@
       <div class="col">
         <div class="card" style="width: auto;">
           <div class="card-body">
-            <h5 class="card-title">Tercer Punto Newton</h5>
+            <h5 class="card-title">Método de Newton-Raphson Tercer Punto</h5>
             <button class="btn btn-primary" on:click={toggleModalNewton3P}>
               Calcular
             </button>
@@ -248,19 +243,20 @@
       <div class="col">
         <div class="card" style="width: auto;">
           <div class="card-body">
-            <h5 class="card-title">Tercer punto secante</h5>
+            <h5 class="card-title">Método de la Secante Tercer Punto</h5>
             <button class="btn btn-primary" on:click={toggleModalSecante3P}>
               Calcular
+            </button>
           </div>
         </div>
       </div>
     </div>
 
+    <br>
+
     <div class="col" style="overflow-x: hidden;">
-      Parte de visualizacion
       <div class="card" style="width: 100%; height: 100%;">
-        <div class="card-body" style="overflow-x: scroll;">
-          <h5 class="card-title">Resutado de la operación</h5>
+        <div class="card-body">
           {#if showComponent}
             {#key componentKey}
               <PrimerPuntoBiseccion
@@ -299,6 +295,88 @@
             {/key}
           {/if}
         </div>
+
+        {#if showComponentsegundoP}
+          {#key componentKey}
+            <ApiSegundoPunto
+              {componentKey}
+              xi={formData.xi}
+              ncs={formData.ncs}
+              a={formData.a}
+            />
+          {/key}
+        {/if}
+
+        {#if showComponentTercerBiseccion3P}
+          {#key componentKey}
+            <ApiTercerPuntoBiseccion
+              {componentKey}
+              xi={formData.xi}
+              ncs={formData.ncs}
+              xs={formData.xs}
+            />
+            <br />
+            <div class="card" style="width: 100%; height: 33vh;">
+              <div class="card-body">
+                <h5 class="card-title">Interpretación de resultados</h5>
+                <p class="card-text">Interpretación aquí</p>
+              </div>
+            </div>
+          {/key}
+        {/if}
+
+        {#if showComponentfalsa3P}
+          {#key componentKey}
+            <ApiTercerPuntoFalsa
+              {componentKey}
+              xi={formData.xi}
+              ncs={formData.ncs}
+              xs={formData.xs}
+            />
+            <br />
+            <div class="card" style="width: 100%; height: 33vh;">
+              <div class="card-body">
+                <h5 class="card-title">Interpretación de resultados</h5>
+                <p class="card-text">Interpretación aquí</p>
+              </div>
+            </div>
+          {/key}
+        {/if}
+
+        {#if showComponentNewton3P}
+          {#key componentKey}
+            <ApiTercerPuntoNewton
+              {componentKey}
+              xi={formData.xi}
+              ncs={formData.ncs}
+            />
+            <br />
+            <div class="card" style="width: 100%; height: 33vh;">
+              <div class="card-body">
+                <h5 class="card-title">Interpretación de resultados</h5>
+                <p class="card-text">Interpretación aquí</p>
+              </div>
+            </div>
+          {/key}
+        {/if}
+
+        {#if showComponentSecante3P}
+          {#key componentKey}
+            <ApiTercerPuntoSecante
+              {componentKey}
+              xi={formData.xi}
+              ncs={formData.ncs}
+              xi0={formData.xi0}
+            />
+            <br />
+            <div class="card" style="width: 100%; height: 33vh;">
+              <div class="card-body">
+                <h5 class="card-title">Interpretación de resultados</h5>
+                <p class="card-text">Interpretación aquí</p>
+              </div>
+            </div>
+          {/key}
+        {/if}
       </div>
     </div>
 
@@ -334,73 +412,23 @@
     <br />
 
     <div class="card text-center" style="width: 100%;">
-      <div class="card-header">
+      <div class="card-header" style="color: white;">
         Ingeniería de Sistemas - Universidad de Nariño
       </div>
       <div class="card-body">
-        <h5 class="card-title">
+        <h5 class="card-title" style="color: white;">
           Realizado y desarrollado por Luis Medina, Yesid Bolaños, Gabriel Peña
         </h5>
-        <p class="card-text">Todos los derechos reservados</p>
+        <p class="card-text" style="color: white;">
+          Todos los derechos reservados
+        </p>
         <button class="btn btn-primary">Volver al inicio</button>
       </div>
-      <div class="card-footer text-body-secondary">2023 © YLG Corporation</div>
+      <div class="card-footer text-body-secondary" style="color: white;">
+        2023 © YLG Corporation
+      </div>
     </div>
   </div>
-
-  {#if showComponentsegundoP}
-    {#key componentKey}
-      <ApiSegundoPunto
-        {componentKey}
-        xi={formData.xi}
-        ncs={formData.ncs}
-        a={formData.a}
-      />
-    {/key}
-  {/if}
-
-  {#if showComponentTercerBiseccion3P}
-    {#key componentKey}
-      <ApiTercerPuntoBiseccion
-        {componentKey}
-        xi={formData.xi}
-        ncs={formData.ncs}
-        xs={formData.xs}
-      />
-    {/key}
-  {/if}
-
-  {#if showComponentfalsa3P}
-    {#key componentKey}
-      <ApiTercerPuntoFalsa
-        {componentKey}
-        xi={formData.xi}
-        ncs={formData.ncs}
-        xs={formData.xs}
-      />
-    {/key}
-  {/if}
-
-  {#if showComponentNewton3P}
-    {#key componentKey}
-      <ApiTercerPuntoNewton
-        {componentKey}
-        xi={formData.xi}
-        ncs={formData.ncs}
-      />
-    {/key}
-  {/if}
-
-  {#if showComponentSecante3P}
-    {#key componentKey}
-      <ApiTercerPuntoSecante
-        {componentKey}
-        xi={formData.xi}
-        ncs={formData.ncs}
-        xi0={formData.xi0}
-      />
-    {/key}
-  {/if}
 </main>
 
 <style>

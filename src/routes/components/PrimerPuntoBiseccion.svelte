@@ -32,11 +32,14 @@
 </script>
 
 <main>
-  <h1>Biseccion primer punto</h1>
-  <table class="table table-striped">
+  <h3>Resultado de la Operación</h3>
+  <h1>Método de Bisección Primer Punto</h1>
+  <h2>f(x) = x^10 - 1 </h2>
+  <p>Dado entre 0 y 1.3</p>
+  <table class="table table-info table-striped table-bordered">
     <thead>
       <tr>
-        <th>Número de Iteración</th>
+        <th>Iteración</th>
         <th>xi</th>
         <th>xs</th>
         <th>xr</th>

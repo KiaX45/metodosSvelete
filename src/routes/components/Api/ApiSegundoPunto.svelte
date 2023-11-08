@@ -33,11 +33,13 @@
 </script>
 
 <main>
-  <h1>Falsa pocisión primer punto</h1>
-  <table class="table">
+  <h3>Resultado de la Operación</h3>
+  <h1>Método de Newton-Raphson Para La Raíz Cúbica de un Número</h1>
+  <p>Calculando raíz cúbica de 155</p>
+  <table class="table table-info table-striped table-bordered">
     <thead>
       <tr>
-        <th>Número de Iteración</th>
+        <th>Iteración</th>
         <th>xi</th>
         <th>f(xi)</th>
         <th>df(xi)</th>

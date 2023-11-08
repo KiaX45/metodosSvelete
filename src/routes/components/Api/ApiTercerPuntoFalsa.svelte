@@ -31,11 +31,13 @@
 </script>
 
 <main>
-  <h1>Falsa pocisión primer punto</h1>
-  <table class="table">
+  <h3>Resultado de la Operación</h3>
+  <h1>Método de la Falsa Posición Tercer Punto</h1>
+  <h2>f(x) = tan(x) - 0.5x </h2>
+  <table class="table table-info table-striped table-bordered">
     <thead>
       <tr>
-        <th>Número de Iteración</th>
+        <th>Iteración</th>
         <th>xi</th>
         <th>xs</th>
         <th>xr</th>
