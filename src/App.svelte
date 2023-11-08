@@ -45,11 +45,11 @@
 	}
 
 	const ocultarPrimero = () => {
-		showComponent = false;
+		showModal = false;
 	};
 
 	const ocultarFalsaP = () => {
-		showComponentfalsa1P = false;
+		showModalfalsa1P = false;
 	};
 </script>
 
@@ -84,7 +84,7 @@
 				<div class="card" style="width: auto;">
 					<div class="card-body">
 						<h5 class="card-title">Método de Bisección Primer Punto</h5>
-						<button class="btn btn-primary" on:click={toggleModal, ocultarFalsaP}>
+						<button class="btn btn-primary" on:click={toggleModal}>
 							Calcular
 						</button>
 					</div>
@@ -94,7 +94,7 @@
 				<div class="card" style="width: auto;">
 					<div class="card-body">
 						<h5 class="card-title">Método Falsa pocisión Primer Punto</h5>
-						<button class="btn btn-primary" on:click={toggleModalfalsa1P, ocultarPrimero}>
+						<button class="btn btn-primary" on:click={toggleModalfalsa1P}>
 							Calcular
 						</button>
 					</div>
@@ -212,31 +212,6 @@
 			</div>
 			<div class="card-footer text-body-secondary">2023 © YLG Corporation</div>
 		</div>
-
-		<br />
-		{#if showComponent}
-			{#key componentKey}
-				<PrimerPuntoBiseccion
-					{componentKey}
-					ncs={formData.ncs}
-					es={formData.es}
-					xi={formData.xi}
-					xs={formData.xs}
-				/>
-			{/key}
-		{/if}
-
-		{#if showComponentfalsa1P}
-			{#key componentKey}
-				<ApiPrimerPuntoFalsa
-					{componentKey}
-					ncs={formData.ncs}
-					es={formData.es}
-					xi={formData.xi}
-					xs={formData.xs}
-				/>
-			{/key}
-		{/if}
 	</div>
 </main>
 
