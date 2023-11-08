@@ -77,7 +77,7 @@
 
 	<div class="container text-center" style="width: 100%;">
 		<div class="row">
-
+			<div class="col-4">
 				Parte de seleccion
 				<div class="card" style="width: auto;">
 					<div class="card-body">
@@ -131,12 +131,12 @@
 						<h5 class="card-title">Método tres</h5>
 						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
 					</div>
-
+				</div>
 			</div>
 
 			<div class="col">
 				Parte de visualizacion
-				<div class="card" style="width: 100%; height: 100%; overflow-x-scroll;">
+				<div class="card" style="width: 100%; height: 100%; overflow: scroll;">
 					<div class="card-body" style="overflow-x: scroll;">
 						<h5 class="card-title">Resutado de la operación</h5>
 						{#if showComponent}
