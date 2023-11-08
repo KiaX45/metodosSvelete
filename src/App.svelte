@@ -87,7 +87,8 @@
 						</button>
 					</div>
 				</div>
-
+			</div>
+			<div class="col-4">
 				<div class="card" style="width: auto;">
 					<div class="card-body">
 						<h5 class="card-title">Método Falsa pocisión Primer Punto</h5>
@@ -96,36 +97,16 @@
 						</button>
 					</div>
 				</div>
-
+			</div>
+			<div class="col-4">
 				<div class="card" style="width: auto;">
 					<div class="card-body">
 						<h5 class="card-title">Método tres</h5>
 						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
 					</div>
 				</div>
-				<br />
-
-				<div class="card" style="width: auto;">
-					<div class="card-body">
-						<h5 class="card-title">Método tres</h5>
-						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
-					</div>
-				</div>
-
-				<div class="card" style="width: auto;">
-					<div class="card-body">
-						<h5 class="card-title">Método tres</h5>
-						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
-					</div>
-				</div>
-
-				<div class="card" style="width: auto;">
-					<div class="card-body">
-						<h5 class="card-title">Método tres</h5>
-						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
-					</div>
-				</div>
-
+			</div>
+			<div class="col-4">
 				<div class="card" style="width: auto;">
 					<div class="card-body">
 						<h5 class="card-title">Método tres</h5>
@@ -134,9 +115,37 @@
 				</div>
 			</div>
 
+			<div class="col-4">
+				<div class="card" style="width: auto;">
+					<div class="card-body">
+						<h5 class="card-title">Método tres</h5>
+						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-4">
+				<div class="card" style="width: auto;">
+					<div class="card-body">
+						<h5 class="card-title">Método tres</h5>
+						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-4">
+				<div class="card" style="width: auto;">
+					<div class="card-body">
+						<h5 class="card-title">Método tres</h5>
+						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
+					</div>
+				</div>
+			</div>
+			</div>
+
 			<div class="col">
 				Parte de visualizacion
-				<div class="card" style="width: 100%; height: 100%; overflow: scroll;">
+				<div class="card" style="width: 100%; height: 100%;">
 					<div class="card-body" style="overflow-x: scroll;">
 						<h5 class="card-title">Resutado de la operación</h5>
 						{#if showComponent}
