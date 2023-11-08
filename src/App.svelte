@@ -4,17 +4,22 @@
   //creamos una variable para guardar los datos
   import PrimerPuntoBiseccion from "./routes/components/PrimerPuntoBiseccion.svelte";
   import ApiPrimerPuntoFalsa from "./routes/components/Api/ApiPrimerPuntoFalsa.svelte";
-
+  import ApiSegundoPunto from "./routes/components/Api/ApiSegundoPunto.svelte";
   //importamos el modal
   import BiseccionPrimerPunto from "./routes/components/forms/BiseccionPrimerPunto.svelte";
   //importamos el segundo modal
   import FormularioFalsaPrimerPunto from "./routes/components/forms/FormularioFalsaPrimerPunto.svelte";
+  //importamos el tercer modal
+  import FormularioSegundoPunto from "./routes/components/forms/FormularioSegundoPunto.svelte";
   //funciones para poder controlar el modal que pide los datos de la Api
   let showModal = false;
   let showComponent = false;
 
   let showModalfalsa1P = false;
   let showComponentfalsa1P = false;
+
+  let showModalsegundoP = false;
+  let showComponentsegundoP = false;
 
   let componentKey = 1;
 
@@ -26,9 +31,14 @@
     showModalfalsa1P = !showModalfalsa1P;
   }
 
+  function toggleModalsegundoP() {
+    showModalsegundoP = !showModalsegundoP;
+  }
+
   let formData = {}; // Aquí almacenarás los datos del formulario
 
   function handleFormSubmit(event) {
+    ocultar();
     formData = event.detail; // Nuevos datos del formulario
     console.log(formData);
     componentKey++; // Incrementa la clave para forzar la recreación del componente
@@ -37,6 +47,7 @@
   }
 
   function handleFormSubmitfalsa1P(event) {
+    ocultar();
     formData = event.detail; // Nuevos datos del formulario
     console.log(formData);
     componentKey++; // Incrementa la clave para forzar la recreación del componente
@@ -44,9 +55,19 @@
     toggleModalfalsa1P(); // Cierra el modal después de enviar el formulario
   }
 
+  function handleFormSubmitsegundoP(event) {
+    ocultar();
+    formData = event.detail; // Nuevos datos del formulario
+    console.log(formData);
+    componentKey++; // Incrementa la clave para forzar la recreación del componente
+    showComponentsegundoP = true;
+    toggleModalsegundoP(); // Cierra el modal después de enviar el formulario
+  }
+
   const ocultar = () => {
     showComponent = false;
     showComponentfalsa1P = false;
+    showComponentsegundoP = false;
   };
 </script>
 
@@ -99,8 +120,10 @@
 
         <div class="card" style="width: auto;">
           <div class="card-body">
-            <h5 class="card-title">Método tres</h5>
-            <a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
+            <h5 class="card-title">Segundo Punto</h5>
+            <button class="btn btn-primary" on:click={toggleModalsegundoP}>
+              Calcular
+            </button>
           </div>
         </div>
         <br />
@@ -194,6 +217,10 @@
     <FormularioFalsaPrimerPunto on:submit={handleFormSubmitfalsa1P} />
   {/if}
 
+  {#if showModalsegundoP}
+    <FormularioSegundoPunto on:submit={handleFormSubmitsegundoP} />
+  {/if}
+
   <br />
 
   <div class="card text-center" style="width: 100%;">
@@ -220,6 +247,12 @@
         xi={formData.xi}
         xs={formData.xs}
       />
+      <div class="card" style="width: 100%; height: 33vh;">
+        <div class="card-body">
+          <h5 class="card-title">Interpretación de resultados</h5>
+          <p class="card-text">Interpretación aquí</p>
+        </div>
+      </div>
     {/key}
   {/if}
 
@@ -231,6 +264,17 @@
         es={formData.es}
         xi={formData.xi}
         xs={formData.xs}
+      />
+    {/key}
+  {/if}
+
+  {#if showComponentsegundoP}
+    {#key componentKey}
+      <ApiSegundoPunto
+        {componentKey}
+        xi={formData.xi}
+        ncs={formData.ncs}
+        a={formData.a}
       />
     {/key}
   {/if}
