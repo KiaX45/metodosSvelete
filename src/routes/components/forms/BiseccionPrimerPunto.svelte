@@ -6,10 +6,10 @@
 
   // Este es el estado local del formulario, que recogerá los valores de los inputs
   let formData = {
-     ncs: 0,
+     ncs: 4,
     es: 0,
     xi: 0,
-    xs: 0
+    xs: 1.3
   };
  
 
