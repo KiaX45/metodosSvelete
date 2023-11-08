@@ -1,20 +1,20 @@
 <script>
-  //importamos el componente
-  import { onMount } from "svelte";
-  //creamos una variable para guardar los datos
-  import PrimerPuntoBiseccion from "./routes/components/PrimerPuntoBiseccion.svelte";
-  import ApiPrimerPuntoFalsa from "./routes/components/Api/ApiPrimerPuntoFalsa.svelte";
+	//importamos el componente
+	import { onMount } from "svelte";
+	//creamos una variable para guardar los datos
+	import PrimerPuntoBiseccion from "./routes/components/PrimerPuntoBiseccion.svelte";
+	import ApiPrimerPuntoFalsa from "./routes/components/Api/ApiPrimerPuntoFalsa.svelte";
 
-  //importamos el modal
-  import BiseccionPrimerPunto from "./routes/components/forms/BiseccionPrimerPunto.svelte";
-  //importamos el segundo modal
-  import FormularioFalsaPrimerPunto from "./routes/components/forms/FormularioFalsaPrimerPunto.svelte";
-  //funciones para poder controlar el modal que pide los datos de la Api
-  let showModal = false;
-  let showComponent = false;
+	//importamos el modal
+	import BiseccionPrimerPunto from "./routes/components/forms/BiseccionPrimerPunto.svelte";
+	//importamos el segundo modal
+	import FormularioFalsaPrimerPunto from "./routes/components/forms/FormularioFalsaPrimerPunto.svelte";
+	//funciones para poder controlar el modal que pide los datos de la Api
+	let showModal = false;
+	let showComponent = false;
 
-  let showModalfalsa1P = false;
-  let showComponentfalsa1P = false;
+	let showModalfalsa1P = false;
+	let showComponentfalsa1P = false;
 
 	let componentKey = 1;
 
@@ -22,32 +22,32 @@
 		showModal = !showModal;
 	}
 
-  function toggleModalfalsa1P() {
-    showModalfalsa1P = !showModalfalsa1P;
-  }
+	function toggleModalfalsa1P() {
+		showModalfalsa1P = !showModalfalsa1P;
+	}
 
 	let formData = {}; // Aquí almacenarás los datos del formulario
 
-  function handleFormSubmit(event) {
-    formData = event.detail; // Nuevos datos del formulario
-    console.log(formData);
-    componentKey++; // Incrementa la clave para forzar la recreación del componente
-    showComponent = true;
-    toggleModal(); // Cierra el modal después de enviar el formulario
-  }
+	function handleFormSubmit(event) {
+		formData = event.detail; // Nuevos datos del formulario
+		console.log(formData);
+		componentKey++; // Incrementa la clave para forzar la recreación del componente
+		showComponent = true;
+		toggleModal(); // Cierra el modal después de enviar el formulario
+	}
 
-  function handleFormSubmitfalsa1P(event) {
-    formData = event.detail; // Nuevos datos del formulario
-    console.log(formData);
-    componentKey++; // Incrementa la clave para forzar la recreación del componente
-    showComponentfalsa1P = true;
-    toggleModalfalsa1P(); // Cierra el modal después de enviar el formulario
-  }
+	function handleFormSubmitfalsa1P(event) {
+		formData = event.detail; // Nuevos datos del formulario
+		console.log(formData);
+		componentKey++; // Incrementa la clave para forzar la recreación del componente
+		showComponentfalsa1P = true;
+		toggleModalfalsa1P(); // Cierra el modal después de enviar el formulario
+	}
 
-  const ocultar = () => {
-    showComponent = false;
-    showComponentfalsa1P = false;
-  };
+	const ocultar = () => {
+		showComponent = false;
+		showComponentfalsa1P = false;
+	};
 </script>
 
 <main>
@@ -97,13 +97,13 @@
 					</div>
 				</div>
 
-        <div class="card" style="width: auto;">
-          <div class="card-body">
-            <h5 class="card-title">Método tres</h5>
-            <a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
-          </div>
-        </div>
-        <br />
+				<div class="card" style="width: auto;">
+					<div class="card-body">
+						<h5 class="card-title">Método tres</h5>
+						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
+					</div>
+				</div>
+				<br />
 
 				<div class="card" style="width: auto;">
 					<div class="card-body">
@@ -192,9 +192,9 @@
 		<BiseccionPrimerPunto on:submit={handleFormSubmit} />
 	{/if}
 
-  {#if showModalfalsa1P}
-    <FormularioFalsaPrimerPunto on:submit={handleFormSubmitfalsa1P} />
-  {/if}
+	{#if showModalfalsa1P}
+		<FormularioFalsaPrimerPunto on:submit={handleFormSubmitfalsa1P} />
+	{/if}
 
 	<br />
 
@@ -225,17 +225,17 @@
 		{/key}
 	{/if}
 
-  {#if showComponentfalsa1P}
-    {#key componentKey}
-      <ApiPrimerPuntoFalsa
-        {componentKey}
-        ncs={formData.ncs}
-        es={formData.es}
-        xi={formData.xi}
-        xs={formData.xs}
-      />
-    {/key}
-  {/if}
+	{#if showComponentfalsa1P}
+		{#key componentKey}
+			<ApiPrimerPuntoFalsa
+				{componentKey}
+				ncs={formData.ncs}
+				es={formData.es}
+				xi={formData.xi}
+				xs={formData.xs}
+			/>
+		{/key}
+	{/if}
 </main>
 
 <style>
