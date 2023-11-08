@@ -136,7 +136,7 @@
 
 			<div class="col">
 				Parte de visualizacion
-				<div class="card" style="width: max-content; height: 100%;">
+				<div class="card" style="width: 100%; height: 100%;">
 					<div class="card-body">
 						<h5 class="card-title">Resutado de la operación</h5>
 						{#if showComponent}
