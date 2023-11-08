@@ -247,12 +247,6 @@
         xi={formData.xi}
         xs={formData.xs}
       />
-      <div class="card" style="width: 100%; height: 33vh;">
-        <div class="card-body">
-          <h5 class="card-title">Interpretación de resultados</h5>
-          <p class="card-text">Interpretación aquí</p>
-        </div>
-      </div>
     {/key}
   {/if}
 
