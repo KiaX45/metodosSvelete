@@ -140,7 +140,7 @@
 					<div class="card-body">
 						<h5 class="card-title">Resutado de la operación</h5>
 						<div class="card" style="width: 100%; height: 100%; overflow: auto;">
-							<div class="card-body">
+							<div class="card-body" style="overflow: auto;">
 								<h5 class="card-title">Resultado No. 1</h5>
 								{#if showComponent}
 									{#key componentKey}
