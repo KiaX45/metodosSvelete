@@ -199,7 +199,7 @@
       <div class="col">
         <div class="card" style="width: auto;">
           <div class="card-body">
-            <h5 class="card-title">Método de Falsa Pocisión Primer Punto</h5>
+            <h5 class="card-title">Método de Falsa Posición Primer Punto</h5>
             <button class="btn btn-success" on:click={toggleModalfalsa1P}>
               Calcular
             </button>
