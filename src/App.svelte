@@ -149,7 +149,7 @@
 									xs={formData.xs}
 								/>
 								<br />
-								<div class="card" style="width: auto; height: 33vh;">
+								<div class="card" style="width: auto; height: 33vh; overflow: auto;">
 									<div class="card-body">
 										<h5 class="card-title">Interpretación de resultados</h5>
 										<p class="card-text">Interpretación aquí</p>
