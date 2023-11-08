@@ -75,7 +75,7 @@
 		</div>
 	</nav>
 
-	<div class="container text-center" style="width: 100%; overflow: auto;">
+	<div class="container text-center" style="width: 100%;">
 		<div class="row">
 			<div class="col-4">
 				Parte de seleccion
@@ -87,8 +87,7 @@
 						</button>
 					</div>
 				</div>
-			</div>
-			<div class="col-4">
+
 				<div class="card" style="width: auto;">
 					<div class="card-body">
 						<h5 class="card-title">Método Falsa pocisión Primer Punto</h5>
@@ -97,50 +96,41 @@
 						</button>
 					</div>
 				</div>
-			</div>
-			<div class="col-4">
-				<div class="card" style="width: auto;">
-					<div class="card-body">
-						<h5 class="card-title">Método tres</h5>
-						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-4">
-				<div class="card" style="width: auto;">
-					<div class="card-body">
-						<h5 class="card-title">Método tres</h5>
-						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
-					</div>
-				</div>
-			</div>
 
-			<div class="col-4">
 				<div class="card" style="width: auto;">
 					<div class="card-body">
 						<h5 class="card-title">Método tres</h5>
 						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
 					</div>
 				</div>
-			</div>
-			
-			<div class="col-4">
-				<div class="card" style="width: auto;">
-					<div class="card-body">
-						<h5 class="card-title">Método tres</h5>
-						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
-					</div>
-				</div>
-			</div>
 
-			<div class="col-4">
 				<div class="card" style="width: auto;">
 					<div class="card-body">
 						<h5 class="card-title">Método tres</h5>
 						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
 					</div>
 				</div>
-			</div>
+
+				<div class="card" style="width: auto;">
+					<div class="card-body">
+						<h5 class="card-title">Método tres</h5>
+						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
+					</div>
+				</div>
+
+				<div class="card" style="width: auto;">
+					<div class="card-body">
+						<h5 class="card-title">Método tres</h5>
+						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
+					</div>
+				</div>
+				
+				<div class="card" style="width: auto;">
+					<div class="card-body">
+						<h5 class="card-title">Método tres</h5>
+						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
+					</div>
+				</div>
 			</div>
 
 			<div class="col">
@@ -158,7 +148,10 @@
 									xs={formData.xs}
 								/>
 								<br />
-								<div class="card" style="width: auto; height: 33vh; overflow: auto;">
+								<div
+									class="card"
+									style="width: auto; height: 33vh; overflow: auto;"
+								>
 									<div class="card-body">
 										<h5 class="card-title">Interpretación de resultados</h5>
 										<p class="card-text">Interpretación aquí</p>
@@ -188,57 +181,58 @@
 					</div>
 				</div>
 			</div>
-	</div>
-
-	<!-- Componente de modal que se muestra u oculta basado en la variable showModal -->
-	{#if showModal}
-		<BiseccionPrimerPunto on:submit={handleFormSubmit} />
-	{/if}
-
-	{#if showModalfalsa1P}
-		<FormularioFalsaPrimerPunto on:submit={handleFormSubmitfalsa1P} />
-	{/if}
-
-	<br />
-
-	<div class="card text-center" style="width: 100%;">
-		<div class="card-header">
-			Ingeniería de Sistemas - Universidad de Nariño
 		</div>
-		<div class="card-body">
-			<h5 class="card-title">
-				Realizado y desarrollado por Luis Medina, Yesid Bolaños, Gabriel Peña
-			</h5>
-			<p class="card-text">Todos los derechos reservados</p>
-			<button class="btn btn-primary">Volver al inicio</button>
+
+		<!-- Componente de modal que se muestra u oculta basado en la variable showModal -->
+		{#if showModal}
+			<BiseccionPrimerPunto on:submit={handleFormSubmit} />
+		{/if}
+
+		{#if showModalfalsa1P}
+			<FormularioFalsaPrimerPunto on:submit={handleFormSubmitfalsa1P} />
+		{/if}
+
+		<br />
+
+		<div class="card text-center" style="width: 100%;">
+			<div class="card-header">
+				Ingeniería de Sistemas - Universidad de Nariño
+			</div>
+			<div class="card-body">
+				<h5 class="card-title">
+					Realizado y desarrollado por Luis Medina, Yesid Bolaños, Gabriel Peña
+				</h5>
+				<p class="card-text">Todos los derechos reservados</p>
+				<button class="btn btn-primary">Volver al inicio</button>
+			</div>
+			<div class="card-footer text-body-secondary">2023 © YLG Corporation</div>
 		</div>
-		<div class="card-footer text-body-secondary">2023 © YLG Corporation</div>
+
+		<br />
+		{#if showComponent}
+			{#key componentKey}
+				<PrimerPuntoBiseccion
+					{componentKey}
+					ncs={formData.ncs}
+					es={formData.es}
+					xi={formData.xi}
+					xs={formData.xs}
+				/>
+			{/key}
+		{/if}
+
+		{#if showComponentfalsa1P}
+			{#key componentKey}
+				<ApiPrimerPuntoFalsa
+					{componentKey}
+					ncs={formData.ncs}
+					es={formData.es}
+					xi={formData.xi}
+					xs={formData.xs}
+				/>
+			{/key}
+		{/if}
 	</div>
-
-	<br />
-	{#if showComponent}
-		{#key componentKey}
-			<PrimerPuntoBiseccion
-				{componentKey}
-				ncs={formData.ncs}
-				es={formData.es}
-				xi={formData.xi}
-				xs={formData.xs}
-			/>
-		{/key}
-	{/if}
-
-	{#if showComponentfalsa1P}
-		{#key componentKey}
-			<ApiPrimerPuntoFalsa
-				{componentKey}
-				ncs={formData.ncs}
-				es={formData.es}
-				xi={formData.xi}
-				xs={formData.xs}
-			/>
-		{/key}
-	{/if}
 </main>
 
 <style>
