@@ -136,7 +136,7 @@
 
 			<div class="col" style="overflow: auto;">
 				Parte de visualizacion
-				<div class="card" style="width: 100%; height: 90%; overflow: auto;">
+				<div class="card" style="width: 100%; height: 100%; overflow: auto;">
 					<div class="card-body">
 						<h5 class="card-title">Resutado de la operación</h5>
 						<div class="card" style="width: 100%; height: 100%; overflow: auto;">
@@ -152,7 +152,7 @@
 											xs={formData.xs}
 										/>
 										<br />
-										<div class="card" style="width: max-content; height: 33vh;">
+										<div class="card" style="width: 100%; height: 33vh;">
 											<div class="card-body">
 												<h5 class="card-title">Interpretación de resultados</h5>
 												<p class="card-text">Interpretación aquí</p>
