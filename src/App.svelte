@@ -75,10 +75,9 @@
 		</div>
 	</nav>
 
-	<div class="container text-center" style="width: 100%;">
-		<div class="row">
-			<div class="col-4">
-				Parte de seleccion
+	<div class="container text-center">
+		<div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+			<div class="col">
 				<div class="card" style="width: auto;">
 					<div class="card-body">
 						<h5 class="card-title">Método de Bisección Primer Punto</h5>
@@ -87,7 +86,8 @@
 						</button>
 					</div>
 				</div>
-
+			</div>
+			<div class="col">
 				<div class="card" style="width: auto;">
 					<div class="card-body">
 						<h5 class="card-title">Método Falsa pocisión Primer Punto</h5>
@@ -96,35 +96,8 @@
 						</button>
 					</div>
 				</div>
-
-				<div class="card" style="width: auto;">
-					<div class="card-body">
-						<h5 class="card-title">Método tres</h5>
-						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
-					</div>
-				</div>
-
-				<div class="card" style="width: auto;">
-					<div class="card-body">
-						<h5 class="card-title">Método tres</h5>
-						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
-					</div>
-				</div>
-
-				<div class="card" style="width: auto;">
-					<div class="card-body">
-						<h5 class="card-title">Método tres</h5>
-						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
-					</div>
-				</div>
-
-				<div class="card" style="width: auto;">
-					<div class="card-body">
-						<h5 class="card-title">Método tres</h5>
-						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
-					</div>
-				</div>
-
+			</div>
+			<div class="col">
 				<div class="card" style="width: auto;">
 					<div class="card-body">
 						<h5 class="card-title">Método tres</h5>
@@ -132,50 +105,82 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="col" style="overflow-x: hidden;">
-				Parte de visualizacion
-				<div class="card" style="width: 100%; height: 100%;">
-					<div class="card-body" style="overflow-x: scroll;">
-						<h5 class="card-title">Resutado de la operación</h5>
-						{#if showComponent}
-							{#key componentKey}
-								<PrimerPuntoBiseccion
-									{componentKey}
-									ncs={formData.ncs}
-									es={formData.es}
-									xi={formData.xi}
-									xs={formData.xs}
-								/>
-								<br />
-								<div class="card" style="width: auto; height: 33vh;">
-									<div class="card-body" style="width: auto;">
-										<h5 class="card-title">Interpretación de resultados</h5>
-										<p class="card-text">Interpretación aquí</p>
-									</div>
-								</div>
-							{/key}
-						{/if}
-
-						{#if showComponentfalsa1P}
-							{#key componentKey}
-								<ApiPrimerPuntoFalsa
-									{componentKey}
-									ncs={formData.ncs}
-									es={formData.es}
-									xi={formData.xi}
-									xs={formData.xs}
-								/>
-								<br />
-								<div class="card" style="width: 100%; height: 33vh;">
-									<div class="card-body">
-										<h5 class="card-title">Interpretación de resultados</h5>
-										<p class="card-text">Interpretación aquí</p>
-									</div>
-								</div>
-							{/key}
-						{/if}
+			<div class="col">
+				<div class="card" style="width: auto;">
+					<div class="card-body">
+						<h5 class="card-title">Método tres</h5>
+						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
 					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card" style="width: auto;">
+					<div class="card-body">
+						<h5 class="card-title">Método tres</h5>
+						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card" style="width: auto;">
+					<div class="card-body">
+						<h5 class="card-title">Método tres</h5>
+						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card" style="width: auto;">
+					<div class="card-body">
+						<h5 class="card-title">Método tres</h5>
+						<a href="#" class="btn btn-primary" style="color: white;">Vamos!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col" style="overflow-x: hidden;">
+			Parte de visualizacion
+			<div class="card" style="width: 100%; height: 100%;">
+				<div class="card-body" style="overflow-x: scroll;">
+					<h5 class="card-title">Resutado de la operación</h5>
+					{#if showComponent}
+						{#key componentKey}
+							<PrimerPuntoBiseccion
+								{componentKey}
+								ncs={formData.ncs}
+								es={formData.es}
+								xi={formData.xi}
+								xs={formData.xs}
+							/>
+							<br />
+							<div class="card" style="width: auto; height: 33vh;">
+								<div class="card-body" style="width: auto;">
+									<h5 class="card-title">Interpretación de resultados</h5>
+									<p class="card-text">Interpretación aquí</p>
+								</div>
+							</div>
+						{/key}
+					{/if}
+
+					{#if showComponentfalsa1P}
+						{#key componentKey}
+							<ApiPrimerPuntoFalsa
+								{componentKey}
+								ncs={formData.ncs}
+								es={formData.es}
+								xi={formData.xi}
+								xs={formData.xs}
+							/>
+							<br />
+							<div class="card" style="width: 100%; height: 33vh;">
+								<div class="card-body">
+									<h5 class="card-title">Interpretación de resultados</h5>
+									<p class="card-text">Interpretación aquí</p>
+								</div>
+							</div>
+						{/key}
+					{/if}
 				</div>
 			</div>
 		</div>
